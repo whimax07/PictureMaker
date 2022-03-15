@@ -34,7 +34,9 @@ public class WindowOpen {
     public static void main(String[] args) {
         MakeImage makeImage = new MakeImage();
         makeImage.createImage("Test1", 400, 400);
-        makeImage.use(new DrawLines());
+
+        makeImage.use(new RainbowSquares(RainbowSquares.ColouringMode.Binary));
+
         File newImg = makeImage.finaliseAndSaveImage();
         openImage(newImg);
     }
