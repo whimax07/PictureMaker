@@ -4,7 +4,7 @@ Yet another attempt to make some digital art. This time with a slightly nicer ap
 
 Things that could be added:
  - Add a "smugging" effect.
- - Drop saturation in a ray (long and thin trapezium) of an already drawn colour square image.
+ - (Done) Drop saturation in a ray (long and thin trapezium) of an already drawn colour square image.
  - Do regular squares with brightness set to a random value in a range (discrete or continuous set) then iterate thought them randomly and swap two squares to bring the different between adjacent elements inside a range.
 
 Insperasion:
