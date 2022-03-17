@@ -41,4 +41,5 @@ public class WindowOpen {
         File newImg = makeImage.finaliseAndSaveImage();
         openImage(newImg);
     }
+
 }
