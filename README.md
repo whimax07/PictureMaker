@@ -6,7 +6,7 @@ Yet another attempt to make some digital art. This time with a slightly nicer ap
  - Creats a image, saves the image and then displays the image.
    - The image is of custom size and a variety of file formats.
    - Saves the image with a given name and then creates a popup window displaying the image.
- - Uses an interface to make composing effects easier. It makes the main method easier to read. It makes implementing a libary of operasions neater.
+ - Hard coded image generasion from the main funtion.
  - Operations:
    - Drop saturation in a ray (long and thin trapezium) of an already drawn colour square image.
    - Fill a square with randomly generated square tiles. There are multiple ways to determine the colour of the squares. 
