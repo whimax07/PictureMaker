@@ -9,7 +9,8 @@ Yet another attempt to make some digital art. This time with a slightly nicer ap
  - Hard coded image generasion from the main funtion.
  - Operations:
    - Drop saturation in a ray (long and thin trapezium) of an already drawn colour square image.
-   - Fill a square with randomly generated square tiles. There are multiple ways to determine the colour of the squares. 
+   - Fill a square with randomly generated square tiles. There are multiple ways to determine the colour of the squares.
+   - Add a cascading shape that follows a basic physics simulation.
 
 #### Things that could be added:
  - Add a "smugging" effect.
