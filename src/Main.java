@@ -1,3 +1,6 @@
+import drawing.CascadingImage;
+import utils.Vec2;
+
 import java.awt.*;
 import java.io.File;
 
@@ -13,8 +16,8 @@ public class Main {
         MakeImage makeImage = new MakeImage();
         makeImage.createImage("Test1", WIDTH, HEIGHT);
 
-//        makeImage.use(new RainbowSquares(RainbowSquares.ColouringMode.Binary));
-//        makeImage.use(new AdjustArea(AdjustArea.AdjustMode.Dim, 0.7f, "resources/configs/BasicRayConfig.csv"));
+//        makeImage.use(new drawing.RainbowSquares(drawing.RainbowSquares.ColouringMode.Binary));
+//        makeImage.use(new drawing.AdjustArea(drawing.AdjustArea.AdjustMode.Dim, 0.7f, "resources/configs/BasicRayConfig.csv"));
 
         final CascadingImage.RaindowColourFromTime rainbowColourFromTime
                 = new CascadingImage.RaindowColourFromTime(new Color(232, 25, 25));
@@ -25,7 +28,7 @@ public class Main {
                         new Vec2(5, -10),
                         new Vec2(0, 1),
                         new CascadingImage.BoundingBox(0, WIDTH, 0, HEIGHT),
-                        (Point startPoint) -> new Rectangle(startPoint.x(), startPoint.y(), 10, 10),
+                        (Point startPoint) -> new Rectangle(startPoint.x, startPoint.y, 10, 10),
                         rainbowColourFromTime::getNextColour
                 )
         );

@@ -1,3 +1,7 @@
+package drawing;
+
+import utils.Vec2;
+
 import java.awt.*;
 import java.util.function.Function;
 
@@ -19,7 +23,7 @@ public class CascadingImage implements ImageManipulator {
 
     public CascadingImage(Point startPoint, Vec2 velocity, Vec2 acceleration, BoundingBox endBounds,
                           Function<Point, Shape> shapeMaker, Function<CascadingImage, Color> colourMaker) {
-        currentPosition = new Vec2(startPoint.x(), startPoint.y());
+        currentPosition = new Vec2(startPoint.x, startPoint.y);
         this.velocity = velocity;
         this.acceleration = acceleration;
         this.endBounds = endBounds;

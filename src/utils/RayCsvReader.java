@@ -1,3 +1,5 @@
+package utils;
+
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,7 +23,7 @@ public class RayCsvReader {
 
 
 
-    ArrayList<Polygon> readCsv(File file, int imageWidth, int imageHeight) {
+    public ArrayList<Polygon> readCsv(File file, int imageWidth, int imageHeight) {
         csv = file;
         width = imageWidth;
         height = imageHeight;

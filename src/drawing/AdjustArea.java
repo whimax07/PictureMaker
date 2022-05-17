@@ -1,3 +1,7 @@
+package drawing;
+
+import utils.RayCsvReader;
+
 import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;

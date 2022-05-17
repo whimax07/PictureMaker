@@ -1,3 +1,7 @@
+package utils;
+
+import java.awt.*;
+
 public record Vec2(double x, double y) {
 
     public Point toPoint() {

@@ -1,3 +1,5 @@
+package drawing;
+
 import java.awt.*;
 
 public class DrawLines implements ImageManipulator {

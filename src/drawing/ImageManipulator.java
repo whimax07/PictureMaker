@@ -1,3 +1,5 @@
+package drawing;
+
 import java.awt.*;
 
 public interface ImageManipulator {
