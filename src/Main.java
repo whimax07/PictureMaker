@@ -6,9 +6,9 @@ import java.io.File;
 
 public class Main {
 
-    private static final int WIDTH = 400;
+    private static final int WIDTH = 1600;
 
-    private static final int HEIGHT = 400;
+    private static final int HEIGHT = 1600;
 
 
 
@@ -19,22 +19,22 @@ public class Main {
 //        makeImage.use(new drawing.RainbowSquares(drawing.RainbowSquares.ColouringMode.Binary));
 //        makeImage.use(new drawing.AdjustArea(drawing.AdjustArea.AdjustMode.Dim, 0.7f, "resources/configs/BasicRayConfig.csv"));
 
-        final CascadingImage.RaindowColourFromTime rainbowColourFromTime
-                = new CascadingImage.RaindowColourFromTime(new Color(232, 25, 25));
+        final CascadingImage.ShadeCascade rainbowColourFromTime
+                = new CascadingImage.ShadeCascade(new Color(220, 29, 29));
 
         makeImage.use(
                 new CascadingImage(
-                        new Point(80, 80),
-                        new Vec2(5, -10),
-                        new Vec2(0, 1),
+                        new Point(320, 320),
+                        new Vec2(20, -40),
+                        new Vec2(0, 4),
                         new CascadingImage.BoundingBox(0, WIDTH, 0, HEIGHT),
-                        (Point startPoint) -> new Rectangle(startPoint.x, startPoint.y, 10, 10),
+                        (Point startPoint) -> new Rectangle(startPoint.x, startPoint.y, 40, 40),
                         rainbowColourFromTime::getNextColour
                 )
         );
 
         File newImg = makeImage.finaliseAndSaveImage();
-        WindowOpen.openImage(newImg);
+//        WindowOpen.openImage(newImg);
     }
 
 }

@@ -15,9 +15,9 @@ public class RainbowSquares implements ImageManipulator {
 
     private final ColouringMode colouringMode;
 
-    private int maxSize = 50;
+    private int maxSize = 250;
 
-    private int minSize = 50;
+    private int minSize = 250;
 
     private Graphics2D g2d;
 
@@ -78,9 +78,9 @@ public class RainbowSquares implements ImageManipulator {
             case Binary -> {
                 int coin = ThreadLocalRandom.current().nextInt(0, 2);
                 if (coin == 0) {
-                    hue = 0.322f;
-                    stauration = 0.12f;
-                    brightness = 0.89f;
+                    hue = 45/230f;
+                    stauration = 0.14f;
+                    brightness = 1.0f;
                 } else {
                     hue = 0.795f;
                     stauration = 0.73f;
