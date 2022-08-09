@@ -3,6 +3,8 @@ import utils.Vec2;
 
 import java.awt.*;
 import java.io.File;
+import java.io.IOException;
+
 
 public class Main {
 
@@ -34,7 +36,12 @@ public class Main {
         );
 
         File newImg = makeImage.finaliseAndSaveImage();
-        WindowOpen.openImage(newImg);
+        try {
+            Desktop.getDesktop().open(newImg);
+        } catch (IOException e) {
+            System.out.println("Could not open the default system viewer.");
+            WindowOpen.openImage(newImg);
+        }
     }
 
 }
