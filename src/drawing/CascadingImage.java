@@ -51,6 +51,7 @@ public class CascadingImage implements ImageManipulator {
     }
 
     private void drawShape(Graphics2D g2d) {
+        g2d.setStroke(new BasicStroke(4));
         Point currentPoint = currentPosition.toPoint();
 
         g2d.setColor(colourMaker.apply(this));
@@ -66,13 +67,13 @@ public class CascadingImage implements ImageManipulator {
 
     public record BoundingBox(int lowWidthBound, int highWidthBound, int lowHeightBound, int highHeightBound) { }
 
-    public static class RaindowColourFromTime {
+    public static class RainbowColourFromTime {
 
         private Color color;
 
 
 
-        public RaindowColourFromTime(Color startColor) {
+        public RainbowColourFromTime(Color startColor) {
             this.color = startColor;
         }
 
@@ -83,6 +84,40 @@ public class CascadingImage implements ImageManipulator {
 
             color = Color.getHSBColor((hsb[0] + 0.02f) % 1.0f, hsb[1], hsb[2]);
             return color;
+        }
+
+    }
+
+    public static class ShadeCascade {
+
+        private Color colour;
+
+        private float increment = 0.05f;
+
+
+
+        public ShadeCascade(Color colour) {
+            this.colour = colour;
+        }
+
+
+
+
+        public Color getNextColour(CascadingImage cascadingImage) {
+            float[] hsb = Color.RGBtoHSB(colour.getRed(), colour.getGreen(), colour.getBlue(), null);
+
+            float newBrightness = hsb[2] + increment;
+
+            if (newBrightness > 1.0) {
+                increment = -increment;
+                newBrightness = 1.0f;
+            } else if (newBrightness < 0.0) {
+                increment = -increment;
+                newBrightness = 0.0f;
+            }
+
+            colour = Color.getHSBColor(hsb[0], hsb[1], newBrightness);
+            return colour;
         }
 
     }
